@@ -2,7 +2,7 @@
 ignore:
   - "setup.py"
   - "./tests/"
-  - "./neuralprophet/__init__.py"
+  - "./salegpt/__init__.py"
 
 coverage:
   status:

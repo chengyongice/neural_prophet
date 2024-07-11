@@ -115,12 +115,12 @@ line_length = 120
 
 [tool.pyright]
 include = [
-    "neuralprophet/**/*.py"
+    "salegpt/**/*.py"
 ]
 exclude = [
-    "neuralprophet/**/*plot*.py"
+    "salegpt/**/*plot*.py"
 ]
 
 [tool.ruff]
 line-length = 120
-typing-modules = ["neuralprophet.np_types"]
+typing-modules = ["salegpt.np_types"]

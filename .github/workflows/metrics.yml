@@ -2,7 +2,7 @@ name: Measure Model Performance
 on:
   push:
     paths: # Run only when files under neuralprophet/ are modified
-      - neuralprophet/**
+      - salegpt/**
     branches: # Run only on these branches
       - main
       - develop
