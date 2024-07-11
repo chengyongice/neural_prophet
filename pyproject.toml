@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "salegpt"
 version = "1.0.0rc10"
-description = "NeuralProphet is an easy to learn framework for interpretable time series forecasting."
+description = "salegpt is a tool which is based on NeuralProphet which is an easy to learn framework for interpretable time series forecasting."
 authors = ["Oskar Triebe <triebe@stanford.edu>"]
 license = "MIT"
 readme = "README.md"
