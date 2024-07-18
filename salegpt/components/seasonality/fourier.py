@@ -3,9 +3,9 @@ from abc import abstractmethod
 import torch
 import torch.nn as nn
 
-from neuralprophet import utils
-from neuralprophet.components.seasonality import Seasonality
-from neuralprophet.utils_torch import init_parameter
+from salegpt import utils
+from salegpt.components.seasonality import Seasonality
+from salegpt.utils_torch import init_parameter
 
 
 class FourierSeasonality(Seasonality):

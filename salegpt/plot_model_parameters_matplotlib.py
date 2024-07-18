@@ -5,7 +5,7 @@ import logging
 import numpy as np
 import pandas as pd
 
-from neuralprophet.plot_utils import predict_one_season, predict_season_from_dates, set_y_as_percent
+from salegpt.plot_utils import predict_one_season, predict_season_from_dates, set_y_as_percent
 
 log = logging.getLogger("NP.plotting")
 
@@ -80,7 +80,7 @@ def plot_parameters(
     --------
     Base usage of :meth:`plot_parameters`
 
-    >>> from neuralprophet import NeuralProphet
+    >>> from salegpt import NeuralProphet
     >>> m = NeuralProphet()
     >>> metrics = m.fit(df, freq="D")
     >>> future = m.make_future_dataframe(df=df, periods=365)

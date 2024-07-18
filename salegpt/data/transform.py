@@ -2,8 +2,8 @@ import logging
 
 import pandas as pd
 
-from neuralprophet import df_utils
-from neuralprophet.configure import Normalization
+from salegpt import df_utils
+from salegpt.configure import Normalization
 
 log = logging.getLogger("NP.data.transforming")
 

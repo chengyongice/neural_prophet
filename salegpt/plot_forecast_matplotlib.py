@@ -2,8 +2,8 @@ import logging
 
 import numpy as np
 
-from neuralprophet.plot_model_parameters_matplotlib import plot_custom_season, plot_daily, plot_weekly, plot_yearly
-from neuralprophet.plot_utils import set_y_as_percent
+from salegpt.plot_model_parameters_matplotlib import plot_custom_season, plot_daily, plot_weekly, plot_yearly
+from salegpt.plot_utils import set_y_as_percent
 
 log = logging.getLogger("NP.plotting")
 
@@ -57,7 +57,7 @@ def plot(
     --------
         Base usage
 
-        >>> from neuralprophet import NeuralProphet
+        >>> from salegpt import NeuralProphet
         >>> m = NeuralProphet()
         >>> metrics = m.fit(df, freq="D")
         >>> future = m.make_future_dataframe(df=df, periods=365)

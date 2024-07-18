@@ -14,8 +14,8 @@ from matplotlib.axes import Axes
 from pytorch_lightning.tuner.tuning import Tuner
 from torch.utils.data import DataLoader
 
-from neuralprophet import configure, df_utils, np_types, time_dataset, time_net, utils, utils_metrics
-from neuralprophet.data.process import (
+from salegpt import configure, df_utils, np_types, time_dataset, time_net, utils, utils_metrics
+from salegpt.data.process import (
     _check_dataframe,
     _convert_raw_predictions_to_raw_df,
     _create_dataset,
@@ -24,17 +24,17 @@ from neuralprophet.data.process import (
     _reshape_raw_predictions_to_forecst_df,
     _validate_column_name,
 )
-from neuralprophet.data.split import _make_future_dataframe, _maybe_extend_df
-from neuralprophet.data.transform import _normalize
-from neuralprophet.logger import MetricsLogger
-from neuralprophet.plot_forecast_matplotlib import plot, plot_components
-from neuralprophet.plot_forecast_plotly import conformal_plot_plotly
-from neuralprophet.plot_forecast_plotly import plot as plot_plotly
-from neuralprophet.plot_forecast_plotly import plot_components as plot_components_plotly
-from neuralprophet.plot_model_parameters_matplotlib import plot_parameters
-from neuralprophet.plot_model_parameters_plotly import plot_parameters as plot_parameters_plotly
-from neuralprophet.plot_utils import get_valid_configuration, log_warning_deprecation_plotly, select_plotting_backend
-from neuralprophet.uncertainty import Conformal
+from salegpt.data.split import _make_future_dataframe, _maybe_extend_df
+from salegpt.data.transform import _normalize
+from salegpt.logger import MetricsLogger
+from salegpt.plot_forecast_matplotlib import plot, plot_components
+from salegpt.plot_forecast_plotly import conformal_plot_plotly
+from salegpt.plot_forecast_plotly import plot as plot_plotly
+from salegpt.plot_forecast_plotly import plot_components as plot_components_plotly
+from salegpt.plot_model_parameters_matplotlib import plot_parameters
+from salegpt.plot_model_parameters_plotly import plot_parameters as plot_parameters_plotly
+from salegpt.plot_utils import get_valid_configuration, log_warning_deprecation_plotly, select_plotting_backend
+from salegpt.uncertainty import Conformal
 
 log = logging.getLogger("NP.forecaster")
 
@@ -280,7 +280,7 @@ class NeuralProphet:
 
             Examples
             --------
-            >>> from neuralprophet import NeuralProphet
+            >>> from salegpt import NeuralProphet
             >>> import torch
             >>> import torch.nn as nn
             >>> m = NeuralProphet(loss_func=torch.nn.L1Loss)
@@ -296,7 +296,7 @@ class NeuralProphet:
 
             Examples
             --------
-            >>> from neuralprophet import NeuralProphet
+            >>> from salegpt import NeuralProphet
             >>> # computer MSE, MAE and RMSE
             >>> m = NeuralProphet(collect_metrics=["MSE", "MAE", "RMSE"])
             >>> # use custorm torchmetrics names
@@ -1738,7 +1738,7 @@ class NeuralProphet:
 
         Examples
         --------
-            >>> from neuralprophet import NeuralProphet
+            >>> from salegpt import NeuralProphet
             >>> m = NeuralProphet()
             >>> # set the model to expect these events
             >>> m = m.add_events(["playoff", "superbowl"])

@@ -10,9 +10,9 @@ import torch
 import torch.nn as nn
 import torchmetrics
 
-from neuralprophet import configure, np_types
-from neuralprophet.components.router import get_future_regressors, get_seasonality, get_trend
-from neuralprophet.utils import (
+from salegpt import configure, np_types
+from salegpt.components.router import get_future_regressors, get_seasonality, get_trend
+from salegpt.utils import (
     check_for_regularization,
     config_events_to_model_dims,
     reg_func_events,
@@ -22,7 +22,7 @@ from neuralprophet.utils import (
     reg_func_trend,
     reg_func_trend_glocal,
 )
-from neuralprophet.utils_torch import init_parameter, interprete_model
+from salegpt.utils_torch import init_parameter, interprete_model
 
 log = logging.getLogger("NP.time_net")
 
@@ -797,8 +797,9 @@ class TimeNet(pl.LightningModule):
         scheduler.step()
 
         # Manually track the loss for the lr finder
-        self.log("train_loss", loss, on_step=False, on_epoch=True, prog_bar=True, logger=True)
-        self.log("reg_loss", reg_loss, on_step=False, on_epoch=True, prog_bar=True, logger=True)
+        batch_size = inputs["time"].shape[0]
+        self.log("train_loss", loss, on_step=False, on_epoch=True, prog_bar=True, logger=True, batch_size=batch_size)
+        self.log("reg_loss", reg_loss, on_step=False, on_epoch=True, prog_bar=True, logger=True, batch_size=batch_size)
 
         # Metrics
         if self.metrics_enabled:

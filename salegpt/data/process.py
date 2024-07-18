@@ -4,15 +4,15 @@ from typing import List, Optional
 import numpy as np
 import pandas as pd
 
-from neuralprophet import df_utils, time_dataset
-from neuralprophet.configure import (
+from salegpt import df_utils, time_dataset
+from salegpt.configure import (
     ConfigCountryHolidays,
     ConfigEvents,
     ConfigFutureRegressors,
     ConfigLaggedRegressors,
     ConfigSeasonality,
 )
-from neuralprophet.np_types import Components
+from salegpt.np_types import Components
 
 log = logging.getLogger("NP.data.processing")
 

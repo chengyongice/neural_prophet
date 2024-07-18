@@ -9,9 +9,9 @@ import torch
 from numpy.lib.stride_tricks import sliding_window_view
 from torch.utils.data.dataset import Dataset
 
-from neuralprophet import configure, utils
-from neuralprophet.df_utils import get_max_num_lags
-from neuralprophet.event_utils import get_all_holidays
+from salegpt import configure, utils
+from salegpt.df_utils import get_max_num_lags
+from salegpt.event_utils import get_all_holidays
 
 log = logging.getLogger("NP.time_dataset")
 

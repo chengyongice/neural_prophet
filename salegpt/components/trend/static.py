@@ -1,4 +1,4 @@
-from neuralprophet.components.trend import Trend
+from salegpt.components.trend import Trend
 
 
 class StaticTrend(Trend):

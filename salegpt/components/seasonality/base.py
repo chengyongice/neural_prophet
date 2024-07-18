@@ -1,4 +1,4 @@
-from neuralprophet.components import BaseComponent
+from salegpt.components import BaseComponent
 
 
 class Seasonality(BaseComponent):

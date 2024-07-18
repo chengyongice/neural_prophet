@@ -5,8 +5,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objs as go
 
-from neuralprophet.plot_model_parameters_plotly import get_dynamic_axis_range
-from neuralprophet.plot_utils import set_y_as_percent
+from salegpt.plot_model_parameters_plotly import get_dynamic_axis_range
+from salegpt.plot_utils import set_y_as_percent
 
 log = logging.getLogger("NP.plotly")
 

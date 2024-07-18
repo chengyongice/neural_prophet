@@ -1,10 +1,10 @@
 """
-Invokes neuralprophet when module is run as a script.
+Invokes salegpt when module is run as a script.
 """
 
 import argparse
 
-from neuralprophet._version import __version__
+from salegpt._version import __version__
 
 
 def parse_args(args=None):

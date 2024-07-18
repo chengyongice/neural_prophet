@@ -6,7 +6,7 @@ from typing import Optional
 import numpy as np
 import torch
 
-from neuralprophet import time_dataset, utils_torch
+from salegpt import time_dataset, utils_torch
 
 log = logging.getLogger("NP.plotting")
 

@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 if TYPE_CHECKING:
-    from neuralprophet.configure import ConfigEvents, ConfigFutureRegressors, ConfigLaggedRegressors, ConfigSeasonality
+    from salegpt.configure import ConfigEvents, ConfigFutureRegressors, ConfigLaggedRegressors, ConfigSeasonality
 
 
 log = logging.getLogger("NP.df_utils")
@@ -1078,7 +1078,7 @@ def create_dummy_datestamps(
     --------
     Adding dummy datestamps to a dataframe without datestamps.
     To prepare the dataframe for training, import df_utils and insert your preferred dates.
-        >>> from neuralprophet import df_utils
+        >>> from salegpt import df_utils
         >>> df_drop = df.drop("ds", axis=1)
         >>> df_dummy = df_utils.create_dummy_datestamps(
         >>> df_drop, freq="S", startyear=1970, startmonth=1, startday=1, starthour=0, startminute=0, startsecond=0
@@ -1146,7 +1146,8 @@ def get_freq_dist(ds_col):
         tuple
             numeric delta values (``ms``) and distribution of frequency counts
     """
-    converted_ds = pd.to_datetime(ds_col, utc=True).view(dtype=np.int64)
+    # converted_ds = pd.to_datetime(ds_col, utc=True).view(dtype=np.int64)
+    converted_ds = pd.to_datetime(ds_col, utc=True).astype(np.int64)
     diff_ds = np.unique(converted_ds.diff(), return_counts=True)
     return diff_ds
 

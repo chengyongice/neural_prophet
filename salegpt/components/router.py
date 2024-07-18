@@ -1,15 +1,15 @@
-from neuralprophet.components.future_regressors.linear import LinearFutureRegressors
-from neuralprophet.components.future_regressors.neural_nets import NeuralNetsFutureRegressors
-from neuralprophet.components.future_regressors.shared_neural_nets import SharedNeuralNetsFutureRegressors
-from neuralprophet.components.future_regressors.shared_neural_nets_coef import SharedNeuralNetsCoefFutureRegressors
-from neuralprophet.components.seasonality.fourier import (
+from salegpt.components.future_regressors.linear import LinearFutureRegressors
+from salegpt.components.future_regressors.neural_nets import NeuralNetsFutureRegressors
+from salegpt.components.future_regressors.shared_neural_nets import SharedNeuralNetsFutureRegressors
+from salegpt.components.future_regressors.shared_neural_nets_coef import SharedNeuralNetsCoefFutureRegressors
+from salegpt.components.seasonality.fourier import (
     GlobalFourierSeasonality,
     GlocalFourierSeasonality,
     LocalFourierSeasonality,
 )
-from neuralprophet.components.trend.linear import GlobalLinearTrend, LocalLinearTrend
-from neuralprophet.components.trend.piecewise_linear import GlobalPiecewiseLinearTrend, LocalPiecewiseLinearTrend
-from neuralprophet.components.trend.static import StaticTrend
+from salegpt.components.trend.linear import GlobalLinearTrend, LocalLinearTrend
+from salegpt.components.trend.piecewise_linear import GlobalPiecewiseLinearTrend, LocalPiecewiseLinearTrend
+from salegpt.components.trend.static import StaticTrend
 
 
 def get_trend(config, n_forecasts, quantiles, id_list, num_trends_modelled, device):

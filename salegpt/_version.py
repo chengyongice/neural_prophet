@@ -1,3 +1,3 @@
 from importlib import metadata
 
-__version__ = metadata.version("neuralprophet")
+__version__ = metadata.version("salegpt")

@@ -13,11 +13,11 @@ import pytorch_lightning as pl
 import torch
 from lightning_fabric.utilities.seed import seed_everything
 
-from neuralprophet import utils_torch
-from neuralprophet.logger import ProgressBar
+from salegpt import utils_torch
+from salegpt.logger import ProgressBar
 
 if TYPE_CHECKING:
-    from neuralprophet.configure import ConfigEvents, ConfigLaggedRegressors, ConfigSeasonality, Train
+    from salegpt.configure import ConfigEvents, ConfigLaggedRegressors, ConfigSeasonality, Train
 
 log = logging.getLogger("NP.utils")
 
@@ -34,7 +34,7 @@ def save(forecaster, path: FILE_LIKE):
             Path and filename to be saved, or an in-memory buffer. Filename could be any but suggested to have extension .np.
 
     After you fitted a model, you may save the model to save_test_model.np
-        >>> from neuralprophet import save
+        >>> from salegpt import save
         >>> save(forecaster, "test_save_model.np")
         >>> import io
         >>> buffer = io.BytesIO()
@@ -94,7 +94,7 @@ def load(path: FILE_LIKE, map_location=None):
     Examples
     --------
     Saved model could be loaded from disk file test_save_model.np
-        >>> from neuralprophet import load
+        >>> from salegpt import load
         >>> model = load("test_save_model.np")
     """
     torch_map_location = None
@@ -706,7 +706,7 @@ def set_random_seed(seed: int = 0):
 
     Example
     -------
-    >>> from neuralprophet import set_random_seed
+    >>> from salegpt import set_random_seed
     >>> set_random_seed(seed=42)
     """
     np.random.seed(seed)
@@ -745,7 +745,7 @@ def set_log_level(log_level: str = "INFO", include_handlers: bool = False):
 
     Example
     -------
-    >>> from neuralprophet import set_log_level
+    >>> from salegpt import set_log_level
     >>> set_log_level("ERROR")
     """
     set_logger_level(logging.getLogger("NP"), log_level, include_handlers)

@@ -5,9 +5,9 @@ from typing import Tuple
 
 import pandas as pd
 
-from neuralprophet import df_utils
-from neuralprophet.configure import ConfigEvents, Regressor
-from neuralprophet.data.process import _check_dataframe
+from salegpt import df_utils
+from salegpt.configure import ConfigEvents, Regressor
+from salegpt.data.process import _check_dataframe
 
 log = logging.getLogger("NP.data.splitting")
 

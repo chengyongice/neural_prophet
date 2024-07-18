@@ -1,7 +1,7 @@
 from abc import abstractmethod
 
-from neuralprophet.components import BaseComponent
-from neuralprophet.utils_torch import init_parameter
+from salegpt.components import BaseComponent
+from salegpt.utils_torch import init_parameter
 
 
 class Trend(BaseComponent):
